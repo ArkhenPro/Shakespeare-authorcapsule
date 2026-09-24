@@ -2,91 +2,257 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MR SHAKESPEARE AUTHOR CAPSULE!!!</title>
-</head>
-<body style="background-color: lightyellow; font-family: 'Comic Sans MS', 'Arial', sans-serif; margin: 20px; color: #333333;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Shakespeare: Digital Author Capsule</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #16a085;
+            --accent: #e74c3c;
+            --bg-light: #f8f9fa;
+            --text-main: #333333;
+            --border-color: #dcdde1;
+        }
 
-    <header style="background-color: orange; padding: 15px; text-align: center; border: 5px dashed red;">
-        <h1 style="margin: 0; color: blue; font-size: 36px;">✨ THE ULTIMATE SHAKESPEARE CAPSULE ✨</h1>
-        <p style="margin: 5px 0 0 0; font-style: italic; font-weight: bold;">Made by Me for the Year 8 English Project (Don't steal please)</p>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #34495e);
+            color: #ffffff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.1rem;
+            color: #bdc3c7;
+        }
+
+        nav {
+            background-color: var(--bg-light);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            padding: 0.75rem;
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 4rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .grid-capsule {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.25rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) td {
+            background-color: var(--bg-light);
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: #e8f8f5;
+            color: var(--secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #d1f2eb;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>William Shakespeare</h1>
+        <p>A Curated Author Capsule & Literary Overview</p>
     </header>
 
-    <nav style="text-align: center; margin: 15px 0; background-color: lightgreen; padding: 10px; border-radius: 10px;">
-        <a href="#who" style="margin: 0 15px; font-weight: bold; color: purple; text-decoration: none;">Who Was He?</a> | 
-        <a href="#stats" style="margin: 0 15px; font-weight: bold; color: purple; text-decoration: none;">Cool Stats</a> | 
-        <a href="#plays" style="margin: 0 15px; font-weight: bold; color: purple; text-decoration: none;">Famous Plays</a> | 
-        <a href="#words" style="margin: 0 15px; font-weight: bold; color: purple; text-decoration: none;">Words He Made Up</a>
+    <nav>
+        <a href="#biography">Biography</a>
+        <a href="#metadata">Capsule Profile</a>
+        <a href="#canon">The Dramatic Canon</a>
+        <a href="#linguistics">Linguistic Legacy</a>
     </nav>
 
-    <main>
-        <section id="who" style="background-color: white; padding: 15px; margin-bottom: 15px; border: 2px solid black;">
-            <h2 style="color: darkred; border-bottom: 2px solid darkred;">Who Was William Shakespeare??</h2>
-            <p>William Shakespeare was a super famous English guy who wrote heaps of plays, poems, and acted in London. He was born in a place called <strong>Stratford-upon-Avon</strong> in 1564 (we don't know the exact day but he was baptized on April 26). He died on April 23, 1616. He is basically the most important writer ever in the English language!</p>
-            <p>He lived during the Elizabethan era which means Queen Elizabeth I was the boss. His dad made gloves and his family wasn't super rich but they weren't poor either.</p>
+    <div class="container">
+        
+        <section id="biography">
+            <h2>Historical Context & Biography</h2>
+            <p><strong>William Shakespeare</strong> (baptised 26 April 1564 – 23 April 1616) was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language. Operating during the Elizabethan and Jacobean eras of British history, his work reflects the shifting political landscapes, philosophical inquiries, and cultural rebirth of the English Renaissance.</p>
+            <p>Raised in Stratford-upon-Avon, Warwickshire, Shakespeare later established a highly successful career in London as a member—and eventual co-owner—of the playing company known as the Lord Chamberlain's Men (later the King's Men).</p>
         </section>
 
-        <section id="stats" style="background-color: #e0f7fa; padding: 15px; margin-bottom: 15px; border: 2px solid black;">
-            <h2 style="color: darkblue; border-bottom: 2px solid darkblue;">Fast Facts / Author Capsule Specs</h2>
-            <ul style="line-height: 1.6;">
-                <li><strong>Nickname:</strong> The Bard of Avon 👑</li>
-                <li><strong>Total Plays Written:</strong> Like 37 or 39 plays (depends on who you ask because he collabed with other guys)</li>
-                <li><strong>Sonnets:</strong> 154 poems! (That is a lot of rhyming)</li>
-                <li><strong>His Theater:</strong> The Globe Theatre in London (it burned down once because a fake cannon hit the roof but they rebuilt it)</li>
-                <li><strong>Wife:</strong> Anne Hathaway (Not the actress from the movies, a different one)</li>
-                <li><strong>Weird Will Fact:</strong> When he died he only left his wife his "second-best bed". Pretty mean lol.</li>
-            </ul>
+        <section id="metadata">
+            <h2>Author Capsule Profile</h2>
+            <div class="grid-capsule">
+                <div class="card">
+                    <h3>Key Milestones</h3>
+                    <p>Co-founded the iconic <strong>Globe Theatre</strong> in 1599, establishing a permanent home for commercial Renaissance drama.</p>
+                </div>
+                <div class="card">
+                    <h3>The Oeuvre</h3>
+                    <p>Credited with approximately <strong>39 plays</strong>, <strong>154 sonnets</strong>, and three major narrative poems, spanning multiple genres.</p>
+                </div>
+                <div class="card">
+                    <h3>Literary Eras</h3>
+                    <p>Spanned the <strong>Elizabethan Era</strong> (high romance, nationalism) and the <strong>Jacobean Era</strong> (darker, psychological, political complexities).</p>
+                </div>
+            </div>
         </section>
 
-        <section id="plays" style="background-color: #fff3e0; padding: 15px; margin-bottom: 15px; border: 2px solid black;">
-            <h2 style="color: darkorange; border-bottom: 2px solid darkorange;">His Most Famous Stuff</h2>
-            <p>He wrote three types of plays: Comedies (funny), Tragedies (everyone dies at the end), and Histories (about real kings). Here are the ones you probably have to read in high school:</p>
+        <section id="canon">
+            <h2>The Dramatic Canon</h2>
+            <p>Shakespeare’s dramatic portfolio is traditionally categorized into three distinct genres: Comedies, Tragedies, and Histories.</p>
             
-            <table border="1" style="width: 100%; border-collapse: collapse; background-color: white; text-align: left;">
-                <tr style="background-color: #ffe0b2;">
-                    <th style="padding: 8px;">Play Title</th>
-                    <th style="padding: 8px;">Type</th>
-                    <th style="padding: 8px;">What happens? (Spoiler Alert)</th>
-                </tr>
-                <tr>
-                    <td style="padding: 8px; font-weight: bold;">Romeo and Juliet</td>
-                    <td style="padding: 8px;">Tragedy</td>
-                    <td style="padding: 8px;">Two teenagers fall in love but their families hate each other so it ends really badly.</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px; font-weight: bold;">Hamlet</td>
-                    <td style="padding: 8px;">Tragedy</td>
-                    <td style="padding: 8px;">A ghost tells a prince to get revenge on his uncle. Hamlet talks to a skull.</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px; font-weight: bold;">Macbeth</td>
-                    <td style="padding: 8px;">Tragedy</td>
-                    <td style="padding: 8px;">Witches tell a guy he will be king so he becomes evil and listens to his wife too much.</td>
-                </tr>
-                <tr>
-                    <td style="padding: 8px; font-weight: bold;">A Midsummer Night's Dream</td>
-                    <td style="padding: 8px;">Comedy</td>
-                    <td style="padding: 8px;">Fairies run around a forest putting love juice in peoples eyes. One guy turns into a donkey.</td>
-                </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Classification</th>
+                        <th>Core Thematic Core</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <strong><td>Romeo and Juliet</td></strong>
+                        <td>Tragedy</td>
+                        <td>Explores the destructive nature of generational feuds and fateful romance.</td>
+                    </tr>
+                    <tr>
+                        <strong><td>Hamlet</td></strong>
+                        <td>Tragedy</td>
+                        <td>A deep psychological study of existential dread, inaction, and revenge.</td>
+                    </tr>
+                    <tr>
+                        <strong><td>Macbeth</td></strong>
+                        <td>Tragedy</td>
+                        <td>Examines the corrosive psychological toll of unchecked political ambition.</td>
+                    </tr>
+                    <tr>
+                        <strong><td>A Midsummer Night's Dream</td></strong>
+                        <td>Comedy</td>
+                        <td>An exploration of romantic illusion, order, and chaos using folklore frameworks.</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
-        <section id="words" style="background-color: #f3e5f5; padding: 15px; margin-bottom: 15px; border: 2px solid black;">
-            <h2 style="color: purple; border-bottom: 2px solid purple;">Words He Actually Invented!</h2>
-            <p>If you think Shakespeare's English is annoying, he actually invented over 1,000 words we still use today. Without him we wouldn't have these words:</p>
-            <div style="display: flex; justify-content: space-around; font-weight: bold; font-size: 18px; color: green; margin: 10px 0;">
-                <span>👉 Eyeball</span>
-                <span>👉 Bedroom</span>
-                <span>👉 Gossip</span>
-                <span>👉 Swagger</span>
-                <span>👉 Zany</span>
+        <section id="linguistics">
+            <h2>Linguistic Legacy</h2>
+            <p>The English language transformed rapidly during the Early Modern period. Shakespeare significantly aided this expansion, introducing dynamic vocabulary, shifting words across parts of speech (anthimeria), and popularising hundreds of phrases still in use today.</p>
+            <div class="tag-container">
+                <div class="tag">Eyeball (The Tempest)</div>
+                <div class="tag">Bedroom (A Midsummer Night's Dream)</div>
+                <div class="tag">Gossip (The Merchant of Venice)</div>
+                <div class="tag">Swagger (Henry IV, Part 2)</div>
+                <div class="tag">Zany (Love's Labour's Lost)</div>
             </div>
-            <p style="text-align: center; font-style: italic;">Imagine not being able to say bedroom!!</p>
         </section>
-    </main>
 
-    <footer style="background-color: lightgray; text-align: center; padding: 10px; font-size: 12px; margin-top: 20px; border-top: 1px solid black;">
-        <p>Sources used: My English Textbook, Wikipedia, and some stuff my teacher Mr. Jones said in class.</p>
-        <p>&copy; 2026 Year 8 Shakespeare Project Website. All rights reserved probably.</p>
+    </div>
+
+    <footer>
+        <p>Academic Resource Guide | Built for Educational Use</p>
     </footer>
 
 </body>
